@@ -7,7 +7,7 @@ const Computer = mongoose.model('computer', computerSchema)
 const SmartHome = mongoose.model('SmartHome', SmartHomeSchema)
 
 module.exports = {
-    Computer，
+    Computer,
     SmartHome
 }
 
