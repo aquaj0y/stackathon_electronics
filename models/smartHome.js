@@ -6,7 +6,7 @@ const SmartHome = new Schema(
     name: { type: String, required: true },
     brand: { type: String, required: true },
     price: { type: Number, required: true },
-    color: { type: String, required: true },
+    color: { type: [String], required: true },
     productDetails: { type: String, required: true },
     review: { type: String, required: true },
     onSale: {type: Boolean, required: true}
