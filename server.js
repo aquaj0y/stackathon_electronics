@@ -28,8 +28,8 @@ app.put('/tv/:id', TvController.updateTv)
 app.delete('/tv/:id', TvController.deleteTv)
 
 // Smart Home Routes
-app.get('/smarthome', SmartHomeController.getAllSmartHome)
-app.get('/smarthome/:id', SmartHomeController.getAllSmartHome)
+// app.get('/smarthome', SmartHomeController.getAllSmartHome)
+// app.get('/smarthome/:id', SmartHomeController.getAllSmartHome)
 app.post('/smarthome', SmartHomeController.createSmartHome)
 app.put('/smarthome/:id', SmartHomeController.updateSmartHome)
 app.delete('/plants/:id', SmartHomeController.deleteSmartHome)
