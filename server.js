@@ -43,6 +43,8 @@ app.get('/computers',computerController.getAllComputer)
 
 app.get('/computers/:id',computerController.getComputersById)
 
+app.get('/computers?brand=value1&type=value2',computerController.getComputersByBrandName)
+
 app.post('/computers',computerController.createComputer)
 
 app.put('/computers/:id',computerController.updateComputer)
