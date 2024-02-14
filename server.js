@@ -3,6 +3,8 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const db = require('./db')
 const PORT = process.env.PORT || 3001
+const Controller1 = require('./controllers/Controller1')
+const computerController = require('./controllers/computerController')
 const TvController = require('./controllers/tvController')
 
 // import Smart Home controllers
@@ -33,3 +35,19 @@ app.put('/smarthome/:id', SmartHomeController.updateSmartHome)
 app.delete('/plants/:id', SmartHomeController.deleteSmartHome)
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+
+
+//\\\\\\\\\\\\\\[==== Start =|=  Denesh - Service scripts =======]||||||||||||
+
+app.get('/computers',computerController.getAllComputer)
+
+app.get('/computers/:id',computerController.getComputersById)
+
+app.get('/computers?brand=value1&type=value2',computerController.getComputersByBrandName)
+
+app.post('/computers',computerController.createComputer)
+
+app.put('/computers/:id',computerController.updateComputer)
+
+app.delete('/computers/:id',computerController.deleteComputer)
+//\\\\\\\\\\\\\\[==== End =|=  Denesh - Service scripts =======]||||||||||||
