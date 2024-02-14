@@ -1,11 +1,12 @@
 const express = require('express')
-const logger = require('morgan')
 const bodyParser = require('body-parser')
+const logger = require('morgan')
 const db = require('./db')
 const PORT = process.env.PORT || 3001
-const Controller1 = require('./controllers/Controller1')
-const Controller2 = require('./controllers/Controller2')
 const TvController = require('./controllers/tvController')
+
+// import Smart Home controllers
+const SmartHomeController = require('./controllers/smartHomeController')
 
 const app = express()
 
@@ -23,5 +24,12 @@ app.post('/tv', TvController.createTv)
 app.put('/tv/:id', TvController.updateTv)
 
 app.delete('/tv/:id', TvController.deleteTv)
+
+// Smart Home Routes
+app.get('/smarthome', SmartHomeController.getAllSmartHome)
+app.get('/smarthome/:id', SmartHomeController.getAllSmartHome)
+app.post('/smarthome', SmartHomeController.createSmartHome)
+app.put('/smarthome/:id', SmartHomeController.updateSmartHome)
+app.delete('/plants/:id', SmartHomeController.deleteSmartHome)
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
