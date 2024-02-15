@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
+const cors = require('cors')
 const db = require('./db')
 const PORT = process.env.PORT || 3001
 const Controller1 = require('./controllers/Controller1')
@@ -14,6 +15,11 @@ const app = express()
 
 app.use(logger('dev'))
 app.use(bodyParser.json())
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+
 
 app.get('/', (req, res) => res.send('welcome to our landing page!'))
 
@@ -34,7 +40,7 @@ app.post('/smarthome', SmartHomeController.createSmartHome)
 app.put('/smarthome/:id', SmartHomeController.updateSmartHome)
 app.delete('/plants/:id', SmartHomeController.deleteSmartHome)
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+
 
 
 //\\\\\\\\\\\\\\[==== Start =|=  Denesh - Service scripts =======]||||||||||||
