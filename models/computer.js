@@ -31,9 +31,12 @@ const computerSchema = new Schema(
     rating: { type: Number, min:0,max:5},
     year_release: { type: Date, default: Date.now },
     images:
-        [{
-        image: {type: String,required:false}
-        }],
+        {
+        image_1: {type: String,required:false},
+        image_2: {type: String,required:false},
+        image_3: {type: String,required:false},
+        image_4: {type: String,required:false}
+        }
   },
   { timestamps: true }
 )

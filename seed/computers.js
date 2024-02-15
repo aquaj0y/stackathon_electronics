@@ -37,9 +37,12 @@ const main = async () => {
             rating: 4,
             year_release: "2023-08-02",
             images:
-                [{
-                image: ""
-                }],
+            {
+            image_1: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/169/16982/16982682.jpg",
+            image_2: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/169/16982/16982682_1.jpg",
+            image_3: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/169/16982/16982682_2.jpg",
+            image_4: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/169/16982/16982682_3.jpg"
+            }
           }
           ,
           {
@@ -74,9 +77,12 @@ const main = async () => {
             rating: 3,
             year_release: "2023-05-02",
             images:
-                [{
-                image: ""
-                }],
+            {
+            image_1: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/170/17050/17050946_1.jpeg",
+            image_2: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/170/17050/17050946_3.jpeg",
+            image_3: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/170/17050/17050946_2.jpeg",
+            image_4: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/170/17050/17050946_6.jpeg"
+            }
           },
           {
             name: `Lenovo IdeaCentre 3i Desktop, i7-13700`,
@@ -108,9 +114,12 @@ const main = async () => {
             rating: 4,
             year_release: "2022-05-02",
             images:
-                [{
-                image: ""
-                }],
+            {
+            image_1: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200.jpg",
+            image_2: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200_1.jpg",
+            image_3: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200_4.jpg",
+            image_4: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200_9.jpg"
+            }
           },
           {
             name: ` Apple Macbook Pro`,
@@ -143,9 +152,12 @@ const main = async () => {
             rating: 4,
             year_release: "2023-10-15",
             images:
-                [{
-                image: ""
-                }],
+            {
+                image_1: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200.jpg",
+                image_2: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200_1.jpg",
+                image_3: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200_4.jpg",
+                image_4: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/162/16282/16282200_9.jpg"
+            }
           },
           {
             name: `MSI Codex R Gaming PC`,
@@ -181,9 +193,12 @@ const main = async () => {
             rating: 4,
             year_release: "2022-10-15",
             images:
-                [{
-                image: ""
-                }],
+            {
+            image_1: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/172/17224/17224314.jpg",
+            image_2: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/172/17224/17224314_1.jpg",
+            image_3: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/172/17224/17224314_2.jpg",
+            image_4: "https://multimedia.bbycastatic.ca/multimedia/products/500x500/172/17224/17224314_4.jpg"
+            }
           }
     ]
 
