@@ -2,7 +2,7 @@ const { SmartHome } = require('../models')
 
 const getAllSmartHomes = async (req, res) => {
     try {
-        const smartHomes = await SmartHome.find()
+      const smartHomes = await SmartHome.find({})
         res.json(smartHomes)
     } catch (error) {
         return res.status(500).send(error.message)
@@ -37,7 +37,7 @@ const createSmartHome = async (req, res) => {
 const updateSmartHome = async (req, res) => {
     try {
         let { id } = req.params;
-        let model2 = await SmartHome.findByIdAndUpdate(id, req.body, { new: true })
+        let smartHomes = await SmartHome.findByIdAndUpdate(id, req.body, { new: true })
         if (smartHomes) {
             return res.status(200).json(smartHomes)
         }
@@ -60,9 +60,9 @@ const deleteSmartHome = async (req, res) => {
     }
 }
 module.exports = {
-    getAllSmartHomes,
-    getAllSmartHomesById,
-    createSmartHome,
-    updateSmartHome,
-    deleteSmartHome
+  getAllSmartHomes,
+  getAllSmartHomesById,
+  createSmartHome,
+  updateSmartHome,
+  deleteSmartHome
 }

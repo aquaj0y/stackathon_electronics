@@ -15,9 +15,16 @@ nav {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  width: 200px; /* Set the width of the sidebar */
+  width: 20%; /* Set the width of the sidebar */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin-left: 0;
+  overflow: scroll;
 }
 
 h1 {
@@ -27,10 +34,18 @@ h1 {
 .hero {
   padding-top: 20px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2%;
 }
 
 .product-container {
   border: 1px solid black;
-  padding: 20px;
+  margin-bottom: 40px;
+  width: 20%;
+}
+
+img {
+  height: 100px;
 }
