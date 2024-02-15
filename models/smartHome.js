@@ -4,6 +4,7 @@ const { Schema } = require("mongoose");
 const SmartHome = new Schema(
   {
     name: { type: String, required: true },
+    img: {type: String, required: true},
     brand: { type: String, required: true },
     price: { type: Number, required: true },
     color: { type: [String], required: true },

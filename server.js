@@ -4,7 +4,7 @@ const logger = require('morgan')
 const cors = require('cors')
 const db = require('./db')
 const PORT = process.env.PORT || 3001
-const Controller1 = require('./controllers/Controller1')
+// const Controller1 = require('./controllers/Controller1')
 const computerController = require('./controllers/computerController')
 const TvController = require('./controllers/tvController')
 
@@ -35,8 +35,8 @@ app.put('/tv/:id', TvController.updateTv)
 app.delete('/tv/:id', TvController.deleteTv)
 
 // Smart Home Routes
-// app.get('/smarthome', SmartHomeController.getAllSmartHome)
-// app.get('/smarthome/:id', SmartHomeController.getAllSmartHome)
+app.get('/smarthome', SmartHomeController.getAllSmartHomes)
+app.get('/smarthome/:id', SmartHomeController.getAllSmartHomes)
 app.post('/smarthome', SmartHomeController.createSmartHome)
 app.put('/smarthome/:id', SmartHomeController.updateSmartHome)
 app.delete('/plants/:id', SmartHomeController.deleteSmartHome)
