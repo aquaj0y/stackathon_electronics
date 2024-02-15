@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const cors = require('cors')
 const db = require('./db')
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3002
 const Controller1 = require('./controllers/Controller1')
 const computerController = require('./controllers/computerController')
 const TvController = require('./controllers/tvController')
@@ -13,6 +13,7 @@ const SmartHomeController = require('./controllers/smartHomeController')
 
 const app = express()
 
+app.use(cors())
 app.use(logger('dev'))
 app.use(bodyParser.json())
 
@@ -49,7 +50,9 @@ app.get('/computers',computerController.getAllComputer)
 
 app.get('/computers/:id',computerController.getComputersById)
 
-app.get('/computers?brand=value1&type=value2',computerController.getComputersByBrandName)
+app.get('/computers/product/:name',computerController.getComputersByProductName)
+
+// app.get('/computers?brand=value1&type=value2',computerController.getComputersByBrandName)
 
 app.post('/computers',computerController.createComputer)
 

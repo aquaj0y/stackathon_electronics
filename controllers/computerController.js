@@ -25,17 +25,19 @@ const getComputersById = async (req, res) => {
     }
 }
 
-const getComputersByBrandName = async (req, res) => {
+const getComputersByProductName = async (req, res) => {
     try {
-        const request_route = req.query
-        console.log("============")
-        console.log(request_route)
-        // const { id } = req.params
-        // const computers = await Computer.findById(id)
-        // if (computers) {
-        //     return res.json(computers)
-        // }
-        return res.status(404).send('Computer with the specified ID does not exists');
+        const product_name = req.param
+        //console.log("============")
+        // console.log(request_route)
+        //const { id } = req.params
+        const computers = await Computer.findOne({'name': product_name.name})
+        //console.log(computers)
+        
+        if (computers) {
+            return res.json(computers)
+        }
+        return res.status(404).send('Computer with the specified name does not exists');
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -84,5 +86,5 @@ module.exports = {
     createComputer,
     updateComputer,
     deleteComputer,
-    getComputersByBrandName
+    getComputersByProductName
 }
